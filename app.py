@@ -18,7 +18,7 @@ Fuel_Type = st.selectbox("Select Fuel_Type", (0, 1, 2))
 Selling_Type = st.selectbox("Select Selling_Type", (0, 1))
 Transmission = st.selectbox("Select Transmission", (0, 1))
 
-pkl_path = Path(".").resolve().parent/ 'pages/car_pred_model.pkl'
+pkl_path = Path(__file__).parents[1]/ 'pages/car_pred_model.pkl'
 
 # If button is pressed
 if st.button("Submit"):
