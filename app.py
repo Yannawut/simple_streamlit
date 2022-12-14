@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
+from sklearn.linear_model import LinearRegression
 
 # Title
 st.header("Car price prediction App")
