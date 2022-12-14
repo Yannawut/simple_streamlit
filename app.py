@@ -20,7 +20,7 @@ Selling_Type = st.selectbox("Select Selling_Type", (0, 1))
 Transmission = st.selectbox("Select Transmission", (0, 1))
 
 pkl_path = 'simple_streamlit/car_pred_model.pkl'
-st.write(os.listdir(os.curdir)))
+st.write(os.listdir(os.curdir))
 
 # If button is pressed
 if st.button("Submit"):
