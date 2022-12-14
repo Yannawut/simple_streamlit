@@ -26,7 +26,7 @@ st.write(os.listdir(os.curdir))
 if st.button("Submit"):
     
     # Unpickle classifier
-    clf = pickle.load(open(pkl_path, 'rb'))
+    clf = pickle.load(open("car_pred_model.pkl", 'rb'))
     
     # Store inputs into dataframe
     X = pd.DataFrame([[Year, Present_Price, Driven_kms, Fuel_Type, Selling_Type,
