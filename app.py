@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from sklearn.linear_model import LinearRegression
 from pathlib import Path
+import os
 
 # Title
 st.header("Car price prediction App")
@@ -19,6 +20,7 @@ Selling_Type = st.selectbox("Select Selling_Type", (0, 1))
 Transmission = st.selectbox("Select Transmission", (0, 1))
 
 pkl_path = 'simple_streamlit/car_pred_model.pkl'
+st.write(os.listdir(os.curdir)))
 
 # If button is pressed
 if st.button("Submit"):
