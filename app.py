@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 from sklearn.linear_model import LinearRegression
+from pathlib import Path
 
 # Title
 st.header("Car price prediction App")
@@ -17,12 +18,13 @@ Fuel_Type = st.selectbox("Select Fuel_Type", (0, 1, 2))
 Selling_Type = st.selectbox("Select Selling_Type", (0, 1))
 Transmission = st.selectbox("Select Transmission", (0, 1))
 
+pkl_path = Path(".").resolve().parent/ 'pages/car_pred_model.pkl'
 
 # If button is pressed
 if st.button("Submit"):
     
     # Unpickle classifier
-    clf = pickle.load(open("car_pred_model.pkl", 'rb'))
+    clf = pickle.load(open(pkl_path, 'rb'))
     
     # Store inputs into dataframe
     X = pd.DataFrame([[Year, Present_Price, Driven_kms, Fuel_Type, Selling_Type,
